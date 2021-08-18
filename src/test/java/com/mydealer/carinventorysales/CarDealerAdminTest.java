@@ -28,7 +28,6 @@ public class CarDealerAdminTest {
 		assertEquals(manufacturingNo, c.getManufacturingNumber());
 		assertEquals(brand, c.getBrand());
 		assertEquals(price, c.getPrice());
-		assertFalse(c==null);
 	}
 
 	@Test
@@ -46,6 +45,7 @@ public class CarDealerAdminTest {
 		assertTrue(admin.removeCar(c2));
 		assertFalse(admin.removeCar(c2));
 		assertEquals(2, store.listByPrice().size());
+		assertEquals(c1.getPrice(), store.listByPrice().get(0).getPrice());
 	}
 	
 	@Test

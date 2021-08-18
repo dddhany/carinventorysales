@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-public class Car implements Serializable {
+public final class Car implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private final String manufacturingNumber;
